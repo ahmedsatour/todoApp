@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
     tools:context=".activitys.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            app:title="ToDo"
+            app:titleTextColor="@color/white"
+            />
+
+       </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/fragmentContainerView_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_marginBottom="70dp"/>
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/buttonAppBar_id"
         android:layout_gravity="bottom"
@@ -15,17 +37,21 @@
         app:fabCradleRoundedCornerRadius="20dp"
         app:fabCradleVerticalOffset="10dp">
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/buttonNavigationView_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:background="@android:color/transparent"
             app:menu="@menu/navigation_item_menu"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/blue"
         android:src="@drawable/add_icon"
+
 
         app:layout_anchor="@id/buttonAppBar_id"
         />
